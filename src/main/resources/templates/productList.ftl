@@ -10,30 +10,34 @@
 </head>
 <body>
 <div class="container">
-    <h3>customer list</h3>
+    <h3>product list</h3>
     <table class="table table-striped table-sm">
         <thead class="thead-dark">
         <tr>
             <th>id</th>
             <th>name</th>
-            <th>address</th>
-            <th>phoneNumber</th>
+            <th>description</th>
+            <th>price</th>
+            <th>delivery</th>
             <th>delete</th>
+            <th>update</th>
         </tr>
         </thead>
         <tbody>
-        <#list customers as customer>
+        <#list products as product>
             <tr>
-                <td>${customer.id}</td>
-                <td>${customer.name}</td>
-                <td>${customer.address}</td>
-                <td>${customer.phoneNumber}</td>
-                <td>  <a href="/customer/delete/${customer.id}" type="button" class="btn btn-danger">Delete</a></td>
+                <td>${product.id}</td>
+                <td>${product.name}</td>
+                <td>${product.description}</td>
+                <td>${product.price}</td>
+                <td>${product.delivery?c}</td>
+                <td>  <a href="/product/delete/${product.id}" type="button" class="btn btn-danger">Delete</a></td>
+                <td>  <a href="/product/update/${product.id}" type="button" class="btn btn-primary">Update</a></td>
             </tr>
         </#list>
         </tbody>
     </table>
-    <a href="/customer/create" type="button" class="btn btn-success">Add new customer</a>
+    <a href="/customer/create" type="button" class="btn btn-success">Add new product</a>
 </div>
 
 

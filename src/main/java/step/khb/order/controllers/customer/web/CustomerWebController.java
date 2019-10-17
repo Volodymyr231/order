@@ -1,4 +1,4 @@
-package step.khb.order.controllers.web;
+package step.khb.order.controllers.customer.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,8 +9,6 @@ import step.khb.order.forms.CustomerForm;
 import step.khb.order.model.Customer;
 import step.khb.order.service.customer.impls.CustomerServiceImpls;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
