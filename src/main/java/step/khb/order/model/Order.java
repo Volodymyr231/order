@@ -1,24 +1,42 @@
 package step.khb.order.model;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.time.LocalDate;
 
 public class Order {
     private String id;
+    private Delivery delivery;
     private Product product;
     private Customer customer;
+    private int price;
     private int number;
     private LocalDate date;
 
     public Order() {
     }
 
-    public Order(Product product, Customer customer, int number, LocalDate date) {
+    public Order(Delivery delivery, Product product, Customer customer, int price, int number, LocalDate date) {
+        this.delivery = delivery;
         this.product = product;
         this.customer = customer;
+        this.price = price;
         this.number = number;
         this.date = date;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public Delivery getDelivery() {
+        return delivery;
+    }
+
+    public void setDelivery(Delivery delivery) {
+        this.delivery = delivery;
     }
 
     public String getId() {

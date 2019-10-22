@@ -45,7 +45,6 @@ public class CustomerWebController {
     String create(Model model, @ModelAttribute("customerForm")CustomerForm customerForm){
         Customer newCustomer = new Customer(customerForm.getName(),
                 customerForm.getAddress(),customerForm.getPhoneNumber());
-
         service.create(newCustomer);
         return "redirect:/customer/list";
     }

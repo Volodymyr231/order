@@ -37,9 +37,8 @@
         </#list>
         </tbody>
     </table>
-    <a href="/customer/create" type="button" class="btn btn-success">Add new product</a>
+    <a href="/product/create" type="button" class="btn btn-success">Add new product</a>
 </div>
-
 
 
 </body>
