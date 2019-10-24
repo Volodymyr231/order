@@ -9,6 +9,7 @@ import step.khb.order.model.Customer;
 import step.khb.order.model.Order;
 import step.khb.order.model.Product;
 import step.khb.order.service.customer.impls.CustomerServiceImpls;
+import step.khb.order.service.order.impls.OrderServiceImpl;
 import step.khb.order.service.product.impls.ProductServiceImpls;
 
 import java.util.List;
@@ -18,7 +19,13 @@ import java.util.List;
 @Controller
 public class OrderWebController {
     @Autowired
-    ProductServiceImpls productService;
+    OrderServiceImpl service;
     @Autowired
     CustomerServiceImpls customerService;
+    @RequestMapping ("/list")
+    String showAll(Model model){
+        List<Order> list = service.getAll();
+        model.addAttribute("orders",list);
+        return "orderList";
+    }
 }
