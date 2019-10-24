@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
+import step.khb.order.model.Customer;
+import step.khb.order.model.Order;
 import step.khb.order.model.Product;
 import step.khb.order.service.customer.impls.CustomerServiceImpls;
 import step.khb.order.service.product.impls.ProductServiceImpls;
@@ -19,5 +21,4 @@ public class OrderWebController {
     ProductServiceImpls productService;
     @Autowired
     CustomerServiceImpls customerService;
-
 }
