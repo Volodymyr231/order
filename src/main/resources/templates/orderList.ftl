@@ -42,6 +42,7 @@
         </tbody>
     </table>
     <a href="/order/create" type="button" class="btn btn-success">Add new order</a>
+    <a href="/" type="button" class="btn btn-success">Go to Main</a>
 </div>
 
 

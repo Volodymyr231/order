@@ -34,6 +34,7 @@
         </tbody>
     </table>
     <a href="/customer/create" type="button" class="btn btn-success">Add new customer</a>
+    <a href="/" type="button" class="btn btn-success">Go to Main</a>
 </div>
 
 

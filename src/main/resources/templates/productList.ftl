@@ -38,6 +38,7 @@
         </tbody>
     </table>
     <a href="/product/create" type="button" class="btn btn-success">Add new product</a>
+    <a href="/" type="button" class="btn btn-success">Go to Main</a>
 </div>
 
 
