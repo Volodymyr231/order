@@ -6,7 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 import step.khb.order.forms.CustomerForm;
+import step.khb.order.forms.OrderForm;
 import step.khb.order.model.Customer;
+import step.khb.order.model.Order;
 import step.khb.order.service.customer.impls.CustomerServiceImpls;
 
 import java.util.List;
@@ -48,5 +50,6 @@ public class CustomerWebController {
         service.create(newCustomer);
         return "redirect:/customer/list";
     }
+
 
 }

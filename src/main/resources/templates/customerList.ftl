@@ -19,6 +19,7 @@
             <th>address</th>
             <th>phoneNumber</th>
             <th>delete</th>
+            <th>Orders</th>
         </tr>
         </thead>
         <tbody>
@@ -29,6 +30,8 @@
             <td>${customer.address}</td>
             <td>${customer.phoneNumber}</td>
             <td>  <a href="/customer/delete/${customer.id}" type="button" class="btn btn-danger">Delete</a></td>
+            <td>  <a href="/order/search/${customer.id}" type="button" class="btn btn-blue">Show Orders</a></td>
+
         </tr>
         </#list>
         </tbody>

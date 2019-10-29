@@ -8,17 +8,17 @@ import java.time.LocalDate;
 
 public class OrderForm {
     private String id;
-    private Delivery delivery;
-    private Product product;
-    private Customer customer;
+    private String delivery;
+    private String product;
+    private String customer;
     private int price;
     private int number;
-    private LocalDate date;
+    private String date;
 
     public OrderForm() {
     }
 
-    public OrderForm(Delivery delivery, Product product, Customer customer, int price, int number, LocalDate date) {
+    public OrderForm(String delivery, String product, String customer, int price, int number, String date) {
         this.delivery = delivery;
         this.product = product;
         this.customer = customer;
@@ -35,27 +35,27 @@ public class OrderForm {
         this.id = id;
     }
 
-    public Delivery getDelivery() {
+    public String getDelivery() {
         return delivery;
     }
 
-    public void setDelivery(Delivery delivery) {
+    public void setDelivery(String delivery) {
         this.delivery = delivery;
     }
 
-    public Product getProduct() {
+    public String getProduct() {
         return product;
     }
 
-    public void setProduct(Product product) {
+    public void setProduct(String product) {
         this.product = product;
     }
 
-    public Customer getCustomer() {
+    public String getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
+    public void setCustomer(String customer) {
         this.customer = customer;
     }
 
@@ -75,11 +75,11 @@ public class OrderForm {
         this.number = number;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -87,12 +87,13 @@ public class OrderForm {
     public String toString() {
         return "OrderForm{" +
                 "id='" + id + '\'' +
-                ", delivery=" + delivery +
-                ", product=" + product +
-                ", customer=" + customer +
+                ", delivery='" + delivery + '\'' +
+                ", product='" + product + '\'' +
+                ", customer='" + customer + '\'' +
                 ", price=" + price +
                 ", number=" + number +
                 ", date=" + date +
                 '}';
     }
+
 }

@@ -29,6 +29,7 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
                 .authenticated()
                 .and()
                 .httpBasic();
+
     }
 }
 */

@@ -15,6 +15,8 @@ import javax.annotation.PostConstruct;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class OrderServiceImpl implements IOrderService {
     List<Order> orders = new ArrayList<>();
@@ -27,6 +29,7 @@ public class OrderServiceImpl implements IOrderService {
 
     @PostConstruct
     void init(){
+        repository.deleteAll();
         Product p1 = productService.getAll().get(0);
         Product p2 = productService.getAll().get(1);
         Customer c1 = customerService.getAll().get(0);
@@ -61,5 +64,10 @@ public class OrderServiceImpl implements IOrderService {
         Order order = this.get(id);
         repository.deleteById(id);
         return order;
+    }
+
+    public List<Order> getByCustomerId(String id) {
+        return this.getAll().stream().filter(order -> order.getCustomer().getId().
+                equals(id)).collect(Collectors.toList());
     }
 }
