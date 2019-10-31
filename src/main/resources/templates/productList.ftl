@@ -14,7 +14,6 @@
     <table class="table table-striped table-sm">
         <thead class="thead-dark">
         <tr>
-            <th>id</th>
             <th>name</th>
             <th>description</th>
             <th>price</th>
@@ -26,7 +25,6 @@
         <tbody>
         <#list products as product>
             <tr>
-                <td>${product.id}</td>
                 <td>${product.name}</td>
                 <td>${product.description}</td>
                 <td>${product.price}</td>

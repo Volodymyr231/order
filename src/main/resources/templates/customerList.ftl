@@ -14,7 +14,6 @@
     <table class="table table-striped table-sm">
         <thead class="thead-dark">
         <tr>
-            <th>id</th>
             <th>name</th>
             <th>address</th>
             <th>phoneNumber</th>
@@ -25,7 +24,6 @@
         <tbody>
         <#list customers as customer>
         <tr>
-            <td>${customer.id}</td>
             <td>${customer.name}</td>
             <td>${customer.address}</td>
             <td>${customer.phoneNumber}</td>
